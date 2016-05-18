@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta charset="utf-8" /> 
+	<!-- I hope this is how you tell a mobile not to scale the font all the way down, it looks bette -->
+	<meta name="viewport" content="initial-scale=1.0" /> 
+	<meta name="viewport" content="width=device-width" />
+	<title>TIMEDIFF</title>
+	<script type=text/javascript src="time.js">
+    </script>
+</head>
+<body>
+	<div id="test"></div>
+	<div id='header'>This simple little script takes the time using http from a server, and compares it with the local time of the browser/computer/mobile</div>
+
+	<h3>local time</h3>
+	<div id="lt">no localtime yet</div>
+	<h3>remote time</h3>
+	<div id="rt">no remote time yet</div>
+	<h3>difference in seconds</h3>
+	<div id="diff">diff not done yet</div>
+	<br/><br/>
+	<button onclick='update()'>update time</button>
+	<br/><br/>
+	<h4>delay or latency of the request</h4>
+	<div id="delay">no feedback</div>
+	<br/><br/>
+<div id='footer' style='font-size: 7pt'>
+Just an experiemnt dont expect it to stay up or be usefull
+</div>
+</body>
+<script type=text/javascript>
+    update()
+</script>
+</html>
