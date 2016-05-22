@@ -1,10 +1,12 @@
 var url = location.protocol + '//' + location.hostname + '/ejs/time.php';
 function conv(timestamp){
-    return new Date(timestamp).toTimeString()}
+    return new Date(timestamp).toTimeString();
+}
 //setting local time
 function loc(){
     var locdate = new Date().getTime();
-    return [locdate/1000, conv(locdate)]}
+    return [locdate/1000, conv(locdate)];
+}
 //setting remote time
 
 function xhr(uri, callback) {
@@ -29,7 +31,7 @@ function print(loct, remt, start){
     if (remt[0] >0 )
         { document.getElementById("rt").innerHTML = remt[1]; }
     else
-        { document.getElementById("rt").innerHTML = 'remote connection failed' }
+        { document.getElementById("rt").innerHTML = 'remote connection failed'; }
     document.getElementById("diff").innerHTML = Math.abs((remt[0] - loct[0])).toPrecision(2);
     document.getElementById("delay").innerHTML = Math.abs((loct[0] - start)).toPrecision(2);
 }
