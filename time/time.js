@@ -1,4 +1,4 @@
-var url = location.protocol + '//' + location.hostname + '/ejs/time.php';
+var url = location.protocol + '//' + location.hostname + location.pathname + 'time.php';
 function conv(timestamp){
     return new Date(timestamp).toTimeString();
 }
@@ -7,6 +7,7 @@ function loc(){
     var locdate = new Date().getTime();
     return [locdate/1000, conv(locdate)];
 }
+
 //setting remote time
 
 function xhr(uri, callback) {
@@ -25,7 +26,9 @@ function trigger (remtime, start) {
     var outstring = conv(remtime*1000);
     print(loc(),[remtime, outstring], start);
 }
+
 //printing to the dom based on the output from loc and rem
+
 function print(loct, remt, start){
     document.getElementById("lt").innerHTML = loct[1];
     if (remt[0] >0 )
