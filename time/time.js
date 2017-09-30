@@ -24,12 +24,12 @@ function xhr(uri, callback) {
 
 function trigger (remtime, start) {
     var outstring = conv(remtime*1000);
-    print(loc(),[remtime, outstring], start);
+    updateview(loc(),[remtime, outstring], start);
 }
 
-//printing to the dom based on the output from loc and rem
+//updateviewing to the dom based on the output from loc and rem
 
-function print(loct, remt, start){
+function updateview(loct, remt, start){
     document.getElementById("lt").innerHTML = loct[1];
     if (remt[0] >0 )
         { document.getElementById("rt").innerHTML = remt[1]; }
