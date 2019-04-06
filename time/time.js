@@ -1,4 +1,5 @@
-var url = location.protocol + '//' + location.hostname + location.pathname + 'time.php';
+//var url = location.protocol + '//' + location.hostname + location.pathname + 'time.php';
+var url = location.protocol + '//' + location.hostname + (location.port ? ':'+location.port: '') + location.pathname + 'time.php';
 function conv(timestamp){
     return new Date(timestamp).toTimeString();
 }
